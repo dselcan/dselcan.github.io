@@ -1,0 +1,18 @@
+/*************************************************
+ *  Hugo Academic: an academic theme for Hugo.
+ *  Designed by @GeorgeCushen.
+ *  https://github.com/gcushen/hugo-academic
+ **************************************************/
+
+/*************************************************
+ *  Core
+ **************************************************/
+
+ul.ul-edu li .description p.year {
+  font-size: 0.75rem;
+  color: rgba(0,0,0,0.6);
+}
+
+footer {
+	margin: 0 0 0;
+}

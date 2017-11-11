@@ -1,0 +1,562 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="theme" content="hugo-academic">
+  <meta name="generator" content="Hugo 0.30.2" />
+  <meta name="author" content="David Selčan">
+  <meta name="description" content="Electronics Engineer">
+
+  
+  
+  
+  
+    
+  
+  
+    
+    
+    <link rel="stylesheet" href="/css/highlight.min.css">
+    
+  
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha512-6MXa8B6uaO18Hid6blRMetEIoPqHf7Ux1tnyIQdpt9qI5OACx7C+O3IVTr98vwGnlcg0LOLa02i9Y1HpVhlfiw==" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/academicons/1.8.1/css/academicons.min.css" integrity="sha512-NThgw3XKQ1absAahW6to7Ey42uycrVvfNfyjqcFNgCmOCQ5AR4AO0SiXrN+8ZtYeappp56lk1WtvjVmEa+VR6A==" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha512-SfTiTlX6kk+qitfevl/7LibUOeJWlt9rbyDn92a1DqWOw9vWG2MFoays0sgObmWazO5BQPiFucnnEAjpAB+/Sw==" crossorigin="anonymous">
+  
+  
+
+
+  
+
+  <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Montserrat:400,700%7cRoboto:400,400italic,700%7cRoboto&#43;Mono">
+  
+  <link rel="stylesheet" href="/styles.css">
+  
+  <link rel="stylesheet" href="/css/override.css">
+  
+
+  
+
+  
+
+  <link rel="icon" type="image/png" href="/img/icon.png">
+  <link rel="apple-touch-icon" type="image/png" href="/img/apple-touch-icon.png">
+
+  <link rel="canonical" href="/post/osciwalker/">
+
+  
+
+  <title>OsciWalker | david.selcan.eu</title>
+
+</head>
+<body id="top" data-spy="scroll" data-target="#navbar-main" data-offset="71">
+
+<nav class="navbar navbar-default navbar-fixed-top" id="navbar-main">
+  <div class="container">
+
+    
+    <div class="navbar-header">
+      
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+              data-target=".navbar-collapse" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      
+      <a class="navbar-brand" href="/">david.selcan.eu</a>
+    </div>
+
+    
+    <div class="collapse navbar-collapse">
+
+      
+      <ul class="nav navbar-nav navbar-right">
+        
+
+        
+
+        <li class="nav-item">
+          <a href="/#about">
+            
+            <span>Home</span>
+          </a>
+        </li>
+
+        
+        
+
+        
+
+        <li class="nav-item">
+          <a href="/#publications_selected">
+            
+            <span>Publications</span>
+          </a>
+        </li>
+
+        
+        
+
+        
+
+        <li class="nav-item">
+          <a href="/#posts">
+            
+            <span>Posts</span>
+          </a>
+        </li>
+
+        
+        
+
+        
+
+        <li class="nav-item">
+          <a href="/#projects">
+            
+            <span>Projects</span>
+          </a>
+        </li>
+
+        
+        
+
+        
+
+        <li class="nav-item">
+          <a href="/#contact">
+            
+            <span>Contact</span>
+          </a>
+        </li>
+
+        
+        
+
+        
+      </ul>
+
+    </div>
+  </div>
+</nav>
+
+
+<article class="article" itemscope itemtype="http://schema.org/Article">
+
+  
+
+
+  <div class="article-container">
+    <h1 itemprop="name">OsciWalker</h1>
+    
+
+<div class="article-metadata">
+
+  <span class="article-date">
+    
+    <time datetime="2015-11-29 21:56:34 &#43;0200 &#43;0200" itemprop="datePublished">
+      Nov 29, 2015
+    </time>
+  </span>
+
+  
+  <span class="middot-divider"></span>
+  <span class="article-reading-time">
+    5 min read
+  </span>
+  
+
+  
+  
+
+  
+
+  
+  
+
+  
+
+</div>
+
+    <div class="article-style" itemprop="articleBody">
+      
+
+<h2 id="introduction">Introduction</h2>
+
+<p>It is sometimes hard for students, especially ones new to electronics, to grasp the limitless possibilities that they gain from the knowledge they obtain while studying electronics engineering. For this purpose, I looked for a simple, mostly software related project that could bring the power of electronics closer to the interest of younger students that already attend electronics engineering courses, or are thinking about it.</p>
+
+<p>Consequently, I have decided to design a simple game, which would be played using only a small microcontroller board and an oscilloscope, which would showcase two of the more important tools that are important during the process of becoming an electronics engineer – the oscilloscope, which is the most important and most useful instrument any electronics engineering student will use, and microcontrollers, which present the foundation of almost all modern electronics project.</p>
+
+<p>Thus was born the idea of OsciWalker, a &ldquo;runner&rdquo; (though due to the speed more of a &ldquo;walker&rdquo;, hence the name) game where you must guide a lost spaceship through a long (actually endless) subterranean tunnel, where the ship must avoid collisions with dangerous hanging ice stalactites and gigantic poisonous mushrooms. The OsciWalker code can be found at the <a href="https://github.com/dselcan/OsciWalker" target="_blank">OsciWalker GitHub repository</a>.</p>
+
+<h2 id="oscilloscope-drawing">Oscilloscope drawing</h2>
+
+<p>The principle of drawing on the oscilloscope is actually pretty straightforward. A two channel oscilloscope takes the signals on its two input channels and based on their values renders a line on the screen – the first channel is used to control the vertical position of the line and the second channel to control the horizontal position. To put this in another way, the two signals represent the X and Y positions of the oscilloscope screen, so to control the screen of the oscilloscope, the X and Y axis signal must be varied to produce the desired result. As an example, refer to the following drawing of a spaceship graphic sprite.</p>
+
+<p><img src="/img/post/osciwalker/Oscilloscope_drawing_details.png" alt="Oscilloscope drawing principle" /></p>
+
+<h2 id="game-code">Game code</h2>
+
+<p>The first version of the OsciWalker game was developed as a standalone application, where the SDL2 library was used for graphics rendering. All function of the game itself were coded in a way to be suitable for later use on a microcontroller. The SDL2 library was the used to display the game state on the screen. Using this approach, it is possible to develop a game much faster then if the development was done directly on a microcontroller, as no additional hardware is needed during development.</p>
+
+<p><img src="/img/post/osciwalker/gallery/Osciwalker_SW_Emulator_1.png" alt="OsciWalker initial emulated game" /></p>
+
+<p>The game implements the following features:</p>
+
+<ul>
+<li>A spaceship that moves through a tunnel at a fixed rate. It can be controlled to move up or down, allowing it to avoid obstacles.</li>
+<li>Two types of obstacles: hanging ice stalactites, that must be dived under, and gigantic mushrooms, that must be flown over.</li>
+<li>If the spaceship collides with an obstacle, it disintegrates in an animated way and the game is restarted.</li>
+<li>At the beginning, the entrance into the tunnel is shown. Additionally, the tunnel can switch between a total of 5 different height levels.</li>
+<li>The switching of the tunnels, as well as position of obstacles is controlled by a random number generator.</li>
+</ul>
+
+<h2 id="hardware-interfacing">Hardware interfacing</h2>
+
+<p>The game code was then ported to a STM32F3 microcontroller, running a FreeRTOS operating system. The STM32F3DISCOVERY board was used because it had all the required periphery needed (two independant DAC channels and an accelerometer to use for game control).</p>
+
+<h4 id="signal-generation">Signal generation</h4>
+
+<p>The signals to the oscilloscope are generated by two independent 12 bit DACs, each running at 100 kHz. By setting a frame rate of 20 frames per second, this means that a total of 5000 points can be drawn each frame, which is more than enough for the OsciWalker game (where the ship uses approximately 500 points and each obstacle approximately 250p points).</p>
+
+<h4 id="accelerometer">Accelerometer</h4>
+
+<p>The acceleration sensor that can be accessed over the I2C interface was used as a controller. By flicking the STM32F3DISCOVERY board up or down, the OsciWalker ship can be controlled. This is accomplished by taking the Z-axis readings of the oscilloscope and applying a high-pass IIR filter over it. When the accelerometer signal exceeds a predefined threshold, an move up or move down event is triggered, depending on the direction of the acceleration.</p>
+
+<h4 id="random-number-generator">Random number generator</h4>
+
+<p>To assure that no two playthroughs are alike, a PRNG is used to generate obstacles and perform level height adjustment. Sicne the STM32F3 microcontroller lacks the methods with which game PRNGs are traditionally seeded (usually system time is used) the least significant bit of the accelerometer readings is used - each time the bit is set, a PRNG value is discarded. This means that the random noise of the acceleration sensor is used to influence the PRNG sequence, greatly incresing the quality of random numbers generated.</p>
+
+<h2 id="game-performance">Game performance</h2>
+
+<p>The game was tested on two different oscilloscopes: the HM1507 by Hameg, which uses a CRT screen and the DS2102A by Rigol, which uses an LCD screen. From the pictures of the game it can be seen that the CRT screen oscilloscope produces a better image than the LCD screen oscilloscope. There are three reasons for this: the CRT screen uses an analog beam to render the image, featuring a low pass filtering effect, the Hameg oscilloscope has better noise performance than the Rigol oscilloscope and the beam of the CRT screen has a better persistence effect, which looks more pleasing to a human than the disjointed pixels of a monochrome LCD screen.
+<img src="/img/post/osciwalker/Oscilloscope_comparison.jpg" alt="OsciWalker Hameg and Rigol Oscilloscope Comparison" /></p>
+
+<p>
+<link rel="stylesheet" href="/css/hugo-easy-gallery.css" />
+
+<div class="gallery caption-position-bottom caption-effect-slide hover-effect-zoom hover-transition" itemscope itemtype="http://schema.org/ImageGallery">
+				<div class="box">
+				  <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+				    <div class="img" style="background-image: url('//img/post/osciwalker/gallery//Osciwalker_Hameg_Scope_1.jpg');" >
+				      <img itemprop="thumbnail" src="//img/post/osciwalker/gallery//Osciwalker_Hameg_Scope_1.jpg" alt="Osciwalker hameg scope 1" />
+				    </div>
+			      <figcaption>
+		          <p>Osciwalker hameg scope 1</p>
+			      </figcaption>
+				    <a href="//img/post/osciwalker/gallery//Osciwalker_Hameg_Scope_1.jpg" itemprop="contentUrl"></a>
+				  </figure>
+				</div>
+				<div class="box">
+				  <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+				    <div class="img" style="background-image: url('//img/post/osciwalker/gallery//Osciwalker_Hameg_Scope_2.jpg');" >
+				      <img itemprop="thumbnail" src="//img/post/osciwalker/gallery//Osciwalker_Hameg_Scope_2.jpg" alt="Osciwalker hameg scope 2" />
+				    </div>
+			      <figcaption>
+		          <p>Osciwalker hameg scope 2</p>
+			      </figcaption>
+				    <a href="//img/post/osciwalker/gallery//Osciwalker_Hameg_Scope_2.jpg" itemprop="contentUrl"></a>
+				  </figure>
+				</div>
+				<div class="box">
+				  <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+				    <div class="img" style="background-image: url('//img/post/osciwalker/gallery//Osciwalker_Hameg_Scope_3.jpg');" >
+				      <img itemprop="thumbnail" src="//img/post/osciwalker/gallery//Osciwalker_Hameg_Scope_3.jpg" alt="Osciwalker hameg scope 3" />
+				    </div>
+			      <figcaption>
+		          <p>Osciwalker hameg scope 3</p>
+			      </figcaption>
+				    <a href="//img/post/osciwalker/gallery//Osciwalker_Hameg_Scope_3.jpg" itemprop="contentUrl"></a>
+				  </figure>
+				</div>
+				<div class="box">
+				  <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+				    <div class="img" style="background-image: url('//img/post/osciwalker/gallery//Osciwalker_Rigol_Scope_1.jpg');" >
+				      <img itemprop="thumbnail" src="//img/post/osciwalker/gallery//Osciwalker_Rigol_Scope_1.jpg" alt="Osciwalker rigol scope 1" />
+				    </div>
+			      <figcaption>
+		          <p>Osciwalker rigol scope 1</p>
+			      </figcaption>
+				    <a href="//img/post/osciwalker/gallery//Osciwalker_Rigol_Scope_1.jpg" itemprop="contentUrl"></a>
+				  </figure>
+				</div>
+				<div class="box">
+				  <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+				    <div class="img" style="background-image: url('//img/post/osciwalker/gallery//Osciwalker_Rigol_Scope_2.jpg');" >
+				      <img itemprop="thumbnail" src="//img/post/osciwalker/gallery//Osciwalker_Rigol_Scope_2.jpg" alt="Osciwalker rigol scope 2" />
+				    </div>
+			      <figcaption>
+		          <p>Osciwalker rigol scope 2</p>
+			      </figcaption>
+				    <a href="//img/post/osciwalker/gallery//Osciwalker_Rigol_Scope_2.jpg" itemprop="contentUrl"></a>
+				  </figure>
+				</div>
+				<div class="box">
+				  <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+				    <div class="img" style="background-image: url('//img/post/osciwalker/gallery//Osciwalker_Rigol_Scope_3.jpg');" >
+				      <img itemprop="thumbnail" src="//img/post/osciwalker/gallery//Osciwalker_Rigol_Scope_3.jpg" alt="Osciwalker rigol scope 3" />
+				    </div>
+			      <figcaption>
+		          <p>Osciwalker rigol scope 3</p>
+			      </figcaption>
+				    <a href="//img/post/osciwalker/gallery//Osciwalker_Rigol_Scope_3.jpg" itemprop="contentUrl"></a>
+				  </figure>
+				</div>
+				<div class="box">
+				  <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+				    <div class="img" style="background-image: url('//img/post/osciwalker/gallery//Osciwalker_Rigol_Scope_4.jpg');" >
+				      <img itemprop="thumbnail" src="//img/post/osciwalker/gallery//Osciwalker_Rigol_Scope_4.jpg" alt="Osciwalker rigol scope 4" />
+				    </div>
+			      <figcaption>
+		          <p>Osciwalker rigol scope 4</p>
+			      </figcaption>
+				    <a href="//img/post/osciwalker/gallery//Osciwalker_Rigol_Scope_4.jpg" itemprop="contentUrl"></a>
+				  </figure>
+				</div>
+				<div class="box">
+				  <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+				    <div class="img" style="background-image: url('//img/post/osciwalker/gallery//Osciwalker_Rigol_Scope_Closeup.jpg');" >
+				      <img itemprop="thumbnail" src="//img/post/osciwalker/gallery//Osciwalker_Rigol_Scope_Closeup.jpg" alt="Osciwalker rigol scope closeup" />
+				    </div>
+			      <figcaption>
+		          <p>Osciwalker rigol scope closeup</p>
+			      </figcaption>
+				    <a href="//img/post/osciwalker/gallery//Osciwalker_Rigol_Scope_Closeup.jpg" itemprop="contentUrl"></a>
+				  </figure>
+				</div>
+				<div class="box">
+				  <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+				    <div class="img" style="background-image: url('//img/post/osciwalker/gallery//Osciwalker_SW_Emulator_1.png');" >
+				      <img itemprop="thumbnail" src="//img/post/osciwalker/gallery//Osciwalker_SW_Emulator_1.png" alt="Osciwalker s w emulator 1" />
+				    </div>
+			      <figcaption>
+		          <p>Osciwalker s w emulator 1</p>
+			      </figcaption>
+				    <a href="//img/post/osciwalker/gallery//Osciwalker_SW_Emulator_1.png" itemprop="contentUrl"></a>
+				  </figure>
+				</div>
+				<div class="box">
+				  <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+				    <div class="img" style="background-image: url('//img/post/osciwalker/gallery//Rigol_digital_capture_1.jpeg');" >
+				      <img itemprop="thumbnail" src="//img/post/osciwalker/gallery//Rigol_digital_capture_1.jpeg" alt="Rigol digital capture 1" />
+				    </div>
+			      <figcaption>
+		          <p>Rigol digital capture 1</p>
+			      </figcaption>
+				    <a href="//img/post/osciwalker/gallery//Rigol_digital_capture_1.jpeg" itemprop="contentUrl"></a>
+				  </figure>
+				</div>
+				<div class="box">
+				  <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+				    <div class="img" style="background-image: url('//img/post/osciwalker/gallery//Rigol_digital_capture_2.jpeg');" >
+				      <img itemprop="thumbnail" src="//img/post/osciwalker/gallery//Rigol_digital_capture_2.jpeg" alt="Rigol digital capture 2" />
+				    </div>
+			      <figcaption>
+		          <p>Rigol digital capture 2</p>
+			      </figcaption>
+				    <a href="//img/post/osciwalker/gallery//Rigol_digital_capture_2.jpeg" itemprop="contentUrl"></a>
+				  </figure>
+				</div>
+				<div class="box">
+				  <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+				    <div class="img" style="background-image: url('//img/post/osciwalker/gallery//Rigol_digital_capture_3.jpeg');" >
+				      <img itemprop="thumbnail" src="//img/post/osciwalker/gallery//Rigol_digital_capture_3.jpeg" alt="Rigol digital capture 3" />
+				    </div>
+			      <figcaption>
+		          <p>Rigol digital capture 3</p>
+			      </figcaption>
+				    <a href="//img/post/osciwalker/gallery//Rigol_digital_capture_3.jpeg" itemprop="contentUrl"></a>
+				  </figure>
+				</div>
+</div>
+ 
+
+
+
+  
+
+
+<script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
+<script src="/js/load-photoswipe.js"></script>
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.1/photoswipe.min.css" integrity="sha256-sCl5PUOGMLfFYctzDW3MtRib0ctyUvI9Qsmq2wXOeBY=" crossorigin="anonymous" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.1/default-skin/default-skin.min.css" integrity="sha256-BFeI1V+Vh1Rk37wswuOYn5lsTcaU96hGaI7OUVCLjPc=" crossorigin="anonymous" />
+<script src="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.1/photoswipe.min.js" integrity="sha256-UplRCs9v4KXVJvVY+p+RSo5Q4ilAUXh7kpjyIP5odyc=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.1/photoswipe-ui-default.min.js" integrity="sha256-PWHOlUzc96pMc8ThwRIXPn8yH4NOLu42RQ0b9SpnpFk=" crossorigin="anonymous"></script>
+
+
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+<div class="pswp__bg"></div>
+
+<div class="pswp__scroll-wrap">
+    
+    <div class="pswp__container">
+      <div class="pswp__item"></div>
+      <div class="pswp__item"></div>
+      <div class="pswp__item"></div>
+    </div>
+    
+    <div class="pswp__ui pswp__ui--hidden">
+    <div class="pswp__top-bar">
+      
+      <div class="pswp__counter"></div>
+      <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+      <button class="pswp__button pswp__button--share" title="Share"></button>
+      <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+      <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+      
+      
+      <div class="pswp__preloader">
+        <div class="pswp__preloader__icn">
+          <div class="pswp__preloader__cut">
+            <div class="pswp__preloader__donut"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+      <div class="pswp__share-tooltip"></div>
+    </div>
+    <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+    </button>
+    <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+    </button>
+    <div class="pswp__caption">
+      <div class="pswp__caption__center"></div>
+    </div>
+    </div>
+    </div>
+</div>
+</p>
+
+    </div>
+
+    
+    
+    
+    <div class="article-tags">
+      
+      <a class="btn btn-primary btn-outline" href="/tags/firmware">firmware</a>
+      
+    </div>
+    
+    
+
+  </div>
+
+</article>
+
+
+
+<div class="article-container article-widget">
+  <div class="hr-light"></div>
+  <h3>Related</h3>
+  <ul>
+    
+    <li><a href="/post/ferifon/">Ferifon mobile phone</a></li>
+    
+    <li><a href="/post/weather-indicator-cube/">Weather Indicator Cube</a></li>
+    
+  </ul>
+</div>
+
+
+
+
+<div class="article-container">
+  
+
+</div>
+
+<footer class="site-footer">
+  <div class="container">
+    <p class="powered-by">
+
+      &copy; 2017 David Selčan &middot; 
+
+      Powered by the
+      <a href="https://sourcethemes.com/academic/" target="_blank" rel="noopener">Academic theme</a> for
+      <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a>.
+	  Hosted on <a href="https://github.com/" target="_blank" rel="noopener">Github</a>.
+
+      <span class="pull-right" aria-hidden="true">
+        <a href="#" id="back_to_top">
+          <span class="button_icon">
+            <i class="fa fa-chevron-up fa-2x"></i>
+          </span>
+        </a>
+      </span>
+
+    </p>
+  </div>
+</footer>
+
+
+<div id="modal" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close btn-large" data-dismiss="modal">&times;</button>
+        <h4 class="modal-title">Cite</h4>
+      </div>
+      <div>
+        <pre><code class="modal-body tex"></code></pre>
+      </div>
+      <div class="modal-footer">
+        <a class="btn btn-primary btn-outline js-copy-cite" href="#" target="_blank">
+          <i class="fa fa-copy"></i> Copy
+        </a>
+        <a class="btn btn-primary btn-outline js-download-cite" href="#" target="_blank">
+          <i class="fa fa-download"></i> Download
+        </a>
+        <div id="modal-error"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+    
+
+    
+    
+
+    
+
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js" integrity="sha512-3P8rXCuGJdNZOnUx/03c1jOTnMn3rP63nBip5gOP2qmUh5YAdVAvFZ1E+QLZZbC1rtMrQb+mah3AfYW11RUrWA==" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.imagesloaded/4.1.3/imagesloaded.pkgd.min.js" integrity="sha512-umsR78NN0D23AzgoZ11K7raBD+R6hqKojyBZs1w8WvYlsI+QuKRGBx3LFCwhatzBunCjDuJpDHwxD13sLMbpRA==" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha512-iztkobsvnjKfAtTNdHkGVjAYTrrtlC7mGp/54c40wowO7LhURYl3gVzzcEqGl/qKXQltJ2HwMrdLcNUdo+N/RQ==" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/3.0.4/isotope.pkgd.min.js" integrity="sha512-VDBOIlDbuC4VWxGJNmuFRQ0Li0SKkDpmGyuhAG5LTDLd/dJ/S0WMVxriR2Y+CyPL5gzjpN4f/6iqWVBJlht0tQ==" crossorigin="anonymous"></script>
+    
+    
+    <script src="/js/hugo-academic.js"></script>
+    
+
+    
+    
+      
+      
+      <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js" integrity="sha256-/BfiIkHlHoVihZdc6TFuj7MmJ0TWcWsMXkeDFwhi0zw=" crossorigin="anonymous"></script>
+      
+
+      
+
+      
+
+      <script>hljs.initHighlightingOnLoad();</script>
+    
+
+    
+    
+
+  </body>
+</html>
+
